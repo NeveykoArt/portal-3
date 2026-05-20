@@ -169,6 +169,8 @@ MonoBehaviour:
   - LevelMenuScene
   - SampleScene
   - Tutorial
+  - SampleScene1
+  - SampleScene2
 --- !u!1001 &1258229723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -725,7 +727,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3b6bccc536e9dcd4e846bb230619ddba, type: 3}
   musicVolume: 0.001
   sfxVolume: 0.7
-  rollingSound: {fileID: 0}
 --- !u!82 &1308814393
 AudioSource:
   m_ObjectHideFlags: 0
