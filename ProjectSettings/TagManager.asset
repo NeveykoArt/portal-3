@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Portalable
   - Reflective
+  - Movable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Cargo
   - Water
   - UI
   - Ground
