@@ -42,6 +42,8 @@ public class PortalGun : MonoBehaviour
     
     void ShootPortal(PortalColor color)
     {
+        if (ToolModeManager.Instance != null && ToolModeManager.Instance.CurrentMode != ToolMode.Portal) return;//НОВОЕ
+
         if (playerCamera == null || shootPoint == null) return;
         if (levelManager == null || !levelManager.TryUsePortal()) return;
 

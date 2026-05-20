@@ -155,6 +155,7 @@ public class MenuManager : MonoBehaviour
 
         if (levelManager != null)
             levelManager.StartGame();
+        if (ToolModeManager.Instance != null) ToolModeManager.Instance.SetMode(ToolMode.Magnet);//НОВОЕ
     }
     
     // Играть еще (кнопка в меню победы)
@@ -196,6 +197,7 @@ public class MenuManager : MonoBehaviour
             // Разблокируем курсор (чтобы не было проблем)
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            if (ToolModeManager.Instance != null) ToolModeManager.Instance.SetMode(ToolMode.Magnet);//Новое
         }
     }
     
