@@ -150,5 +150,44 @@ public class LevelManager : MonoBehaviour
         int minutes = Mathf.FloorToInt(timeRemaining / 60);
         int seconds = Mathf.FloorToInt(timeRemaining % 60);
         timerText.text = $"{minutes:00}:{seconds:00}";
+    }/*
+    // 🔹 Вставь это в секцию [Header("События")] или рядом:
+    [Header("Провал уровня")]
+    [SerializeField] private UnityEvent onLevelFailed;
+    private bool levelFailed = false;
+
+    // 🔹 Вызываем проигрыш (из DeadlyGoo, лазеров и т.д.)
+    public void Lose()
+    {
+        if (levelCompleted || levelFailed) return;
+        levelFailed = true;
+        useTimer = false; // Останавливаем таймер
+        onLevelFailed?.Invoke(); // Позволяет команде подключить своё UI проигрыша
+        StartCoroutine(FadeAndLoseRoutine());
     }
+
+    // 🔹 Перезапуск уровня (для кнопки "Попробовать снова")
+    public void RestartLevel()
+    {
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        var sceneManager = FindFirstObjectByType<SceneManagerScript>();
+        if (sceneManager != null)
+            sceneManager.LoadSceneByName(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        else
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+
+    // 🔹 Рутина затемнения при проигрыше
+    private IEnumerator FadeAndLoseRoutine()
+    {
+        Image fadeImage = CreateFadeOverlay();
+        yield return AnimateFade(fadeImage, 0f, 1f);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0f; // Полная пауза игры
+    }*/
 }

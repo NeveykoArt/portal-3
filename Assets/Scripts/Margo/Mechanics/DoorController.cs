@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
 
-public class DoorController : MonoBehaviour
+public class DoorController : ActivatableDevice // Наследуем от базы
 {
     [Header("⚙️ Настройки")]
-    [SerializeField] private float moveSpeed = 4f;      // Скорость открытия/закрытия
-    [SerializeField] private float openHeight = 5f;     // На сколько метров поднимается
-
-    
+    [SerializeField] private float moveSpeed = 4f;
+    [SerializeField] private float openHeight = 5f;
 
     private Vector3 closedPosition;
     private Vector3 openPosition;
@@ -19,7 +17,6 @@ public class DoorController : MonoBehaviour
         openPosition = closedPosition + Vector3.up * openHeight;
         targetPosition = closedPosition;
 
-        // Добавляем кинематичный Rigidbody, чтобы движущийся коллайдер не ломал физику
         if (!GetComponent<Rigidbody>())
         {
             var rb = gameObject.AddComponent<Rigidbody>();
@@ -30,27 +27,25 @@ public class DoorController : MonoBehaviour
 
     private void Update()
     {
-        // Плавное перемещение к целевой позиции
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
     }
 
-    public void Open()
+    // 🔑 ДОБАВЛЕНО override
+    public override void Open()
     {
         if (!isOpen)
         {
             isOpen = true;
             targetPosition = openPosition;
-            
         }
     }
 
-    public void Close()
+    public override void Close()
     {
         if (isOpen)
         {
             isOpen = false;
             targetPosition = closedPosition;
-            
         }
     }
 }
