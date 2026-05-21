@@ -171,6 +171,7 @@ MonoBehaviour:
   - Level_1
   - Level_2
   - Level_3
+  - FinalScene
 --- !u!1001 &1258229723
 PrefabInstance:
   m_ObjectHideFlags: 0
