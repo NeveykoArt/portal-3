@@ -2278,11 +2278,8 @@ MonoBehaviour:
   walkSpeed: 8
   runSpeed: 16
   acceleration: 10
-  jumpForce: 30
-  airResistance: 0.98
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  deceleration: 8
+  jumpForce: 20
   toggleRun: 0
 --- !u!54 &901535658
 Rigidbody:

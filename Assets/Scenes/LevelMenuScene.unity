@@ -711,7 +711,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: SampleScene
+          m_StringArgument: Level_1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1517256733
@@ -871,7 +871,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: SampleScene1
+          m_StringArgument: Level_2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1603110361
@@ -1065,7 +1065,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: SampleScene2
+          m_StringArgument: Level__3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1788353167
@@ -1512,6 +1512,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f0a77a28da185854b86c9f4e8128e490, type: 3}
+    - target: {fileID: 5620837632860906883, guid: 22d8a5d7e140d5046af0882a5064974a, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620837632860906883, guid: 22d8a5d7e140d5046af0882a5064974a, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 3840
+      objectReference: {fileID: 0}
     - target: {fileID: 6387779989663033568, guid: 22d8a5d7e140d5046af0882a5064974a, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1500
